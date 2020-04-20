@@ -290,6 +290,7 @@ li:hover .catalog-navigation-list {
 
 .user-cart {
     margin-top: 27px;
+    position: relative;
 }
 
 .button-cart {
@@ -302,7 +303,7 @@ li:hover .catalog-navigation-list {
 
     background-color: #a3b8ac;
 
-    padding-right: 34px;
+    padding-right: 10px;
     padding-left: 45px;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -912,4 +913,362 @@ li:hover .catalog-navigation-list {
 
 .developer-link-span {
     border-bottom: 1px solid #9db1a5;
+}
+
+.user-cart-block {
+    position: absolute;
+    top: 38px;
+    right: 0;
+    width: 540px;
+    display: none;
+    background-color: #f8f7f4;
+    color: #323232;
+    border-radius: 5px;
+}
+
+.user-cart:hover .user-cart-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item {
+    display: flex;
+}
+
+.cart-item:first-child {
+    margin-top: 20px;
+}
+
+.cart-item:nth-child(2) {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #cacac7;
+}
+
+.cart-item-name {
+    width: 220px;
+    font-size: 13px;
+    line-height: 16px;
+    margin-right: 30px;
+}
+
+.cart-item-info {
+    font-size: 13px;
+    line-height: 16px;
+    margin-right: 29px;
+}
+
+.cart-item-info span {
+    color: #999999;
+}
+
+.cart-item-price {
+    width: 50px;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.cart-button-cross {
+    align-self: center;
+    margin-right: 14px;
+    margin-left: 18px;
+    border: none;
+    background-color: transparent;
+    width: 13px;
+    height: 13px;
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-button-cross::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 11px;
+    height: 11px;
+    background-image: url(../svg/cross-small.svg);
+    cursor: pointer;
+}
+
+.cart-item-img {
+    position: relative;
+    margin-right: 14px;
+    align-self: center;
+}
+
+.cart-price-total {
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 700;
+    align-self: flex-end;
+    margin-right: 15px;
+    margin-bottom: 11px;
+}
+
+.button-cart-order {
+    width: 170px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    align-self: flex-end;
+    margin-right: 15px;
+    margin-bottom: 20px;
+
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #e9563a;
+    border-radius: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.user-cart-catalog .button-cart::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    width: 21px;
+    height: 20px;
+    background-image: url(../svg/basket-red.svg);
+    background-repeat: no-repeat;
+    background-color: inherit;
+}
+
+.top-main {
+    display: flex;
+}
+
+.breadcrumbs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin-right: auto;
+    align-self: flex-end;
+}
+
+.breadcrumbs li a {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+    border-bottom: 1px solid #aebeb5;
+}
+
+.breadcrumbs-current {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none;
+    align-self: flex-end;
+    margin-bottom: 1px;
+}
+
+.raquo {
+    margin-left: 4px;
+    margin-right: 8px;
+}
+
+.top-main .working-information p:last-child {
+    margin-bottom: 0;
+}
+
+.top-main .working-information {
+    align-self: flex-end;
+}
+
+.catalog-page-title {
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.filter form {
+    display: block;
+}
+
+.filters-top {
+    display: flex;
+}
+
+.filter form fieldset {
+    border: none 0;
+}
+
+.filter-background {
+    background-color: rgba(255, 255, 255, .3);
+    border-radius: 25px;
+    padding: 7px 12px;
+}
+
+.sorting-filter {
+    background-color: transparent;
+    color: #ffffff;
+    border: 0;
+    -webkit-appearance: none;
+    padding-right: 25px;
+}
+
+.sorting-filter option {
+    color: #000000;
+}
+
+.select {
+    display: inline-block;
+    position: relative;
+}
+
+.select svg {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.price {
+    width: 220px;
+}
+
+.price-control {
+    position: relative;
+}
+
+.price-control::before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 2px;
+    background-color: #ffffff;
+    top: 9px;
+    left: 77px;
+}
+
+.price-control input{
+    background: 0 0;
+    border: 0;
+    color: #ffffff;
+    width: 30px;
+}
+
+.min-price {
+    width: 30px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.max-price {
+    width: 30px;
+    margin-right: 3px;
+}
+
+.range-controls {
+    position: relative;
+    padding: 10px 14px;
+}
+
+.range-controls .scale {
+    height: 2px;
+
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.range-controls .bar {
+    width: 60%;
+    height: 2px;
+    margin-left: 20px;
+
+    background-color: #ffffff;
+}
+
+.range-toggle {
+    position: absolute;
+    top: 0px;
+
+    width: 4px;
+    height: 4px;
+
+    background-color: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.range-toggle-min {
+    left: 20px;
+}
+
+.range-toggle-max {
+    left: 60%;
+}
+
+.fat-level {
+    width: 391px;
+}
+
+.fat-level input {
+    display: none;
+}
+
+.fat-level label {
+    position: relative;
+    padding-left: 33px;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.fat-level label::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    background-image: url(../svg/radio-off.svg);
+    background-repeat: no-repeat;
+}
+
+.fat-level input:checked + label::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    background-image: url(../svg/radio-on.svg);
+    background-repeat: no-repeat;
+}
+
+.filters-bottom {
+    display: flex;
+}
+
+.filters-bottom .fillers input[type="checkbox"] {
+    display: none;
+}
+
+.filters-bottom .fillers label {
+    position: relative;
+    padding-left: 33px;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.filters-bottom .fillers label::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    width: 27px;
+    height: 24px;
+    background-color: transparent;
+    background-image: url(../svg/checkbox-off.svg);
+    background-repeat: no-repeat;
 }
