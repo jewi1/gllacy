@@ -21,11 +21,21 @@ body > input[type="radio"] {
 	overflow: hidden;
 }
 
+.site-wrapper {
+    background-color: #849d8f;
+    background-repeat: no-repeat;
+    background-position: center top;
+    -webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
+    -o-transition: background-image 0.5s ease, background-color 0.5s ease;
+    transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
 .container {
-    width: 1146px;
-    padding-left: 27px;
-    padding-right: 27px;
+    box-sizing: border-box;
+    width: 1200px;
+    min-width: 940px;
     margin: 0 auto;
+    padding: 0 27px;
 }
 
 .main-header .container {
@@ -50,23 +60,34 @@ body > input[type="radio"] {
 
 .site-navigation li {
     position: relative;
-    margin-top: 23px;
-    padding: 7px 14px;
+    margin-top: 15px;
+    padding-top: 16px;
+    padding-bottom: 12px;
 }
 
-.site-navigation > li > a {
+.site-navigation > li .site-navigation-item {
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
     color: #ffffff;
     text-decoration: none;
+    padding: 7px 14px;
     
-    border-bottom: 1px solid #b0c8bb;
+}
+
+.site-navigation .site-navigation-item:hover {
+    background-color: #f7f6f3;
+    color: #323232;
+    border-radius: 15px;
+}
+
+.site-navigation .site-navigation-item:active {
+    box-shadow: 0 3px 3px #8a8a8a inset;
 }
 
 .catalog-navigation-list {
     position: absolute;
-    top: 38px;
+    top: 46px;
     left: 0;
     background-color: #f8f7f4;
     width: 143px;
@@ -106,7 +127,7 @@ li:hover .catalog-navigation-list {
     padding-bottom: 4px;
 }
 
-.catalog-navigation-list li a {
+.catalog-navigation-list a {
     display: block;
     color: #000000;
     font-size: 14px;
@@ -117,8 +138,12 @@ li:hover .catalog-navigation-list {
     padding-bottom: 6px;
 }
 
-.catalog-navigation-list li a:hover {
+.catalog-navigation-list a:hover {
     background-color: #fbded8;
+}
+
+.catalog-navigation-list a:active {
+    background-color: #f6b5a5;
 }
 
 .user-buttons {
@@ -156,6 +181,14 @@ li:hover .catalog-navigation-list {
     background-repeat: no-repeat;
 }
 
+.button-search:hover {
+    background-color: #f8f7f4;
+}
+
+.button-search:hover::before {
+    background-image: url(../svg/loupe-hover.svg);
+}
+
 .user-search-form {
     position: absolute;
     top: 38px;
@@ -170,7 +203,7 @@ li:hover .catalog-navigation-list {
     display: block;
 }
 
-.user-search-form form input {
+.user-search-form input {
     box-sizing: border-box;
     width: 300px;
     padding-left: 10px;
@@ -182,6 +215,14 @@ li:hover .catalog-navigation-list {
     color: #999999;
     border: 1px solid #d3d3d2;
     border-radius: 4px;
+}
+
+.user-search-form input:hover {
+    border: 2px solid #c7c6c5;
+}
+
+.user-login-form input:hover {
+    border: 2px solid #c7c6c5;
 }
 
 .user-login {
@@ -219,6 +260,14 @@ li:hover .catalog-navigation-list {
     background-image: url(../svg/entrance.svg);
     background-color: inherit;
     background-repeat: no-repeat;
+}
+
+.button-login:hover {
+    color: #000000;
+}
+
+.button-login:hover::before {
+    background-image: url(../svg/entrance-hover.svg);
 }
 
 .user-login-form {
@@ -342,6 +391,7 @@ li:hover .catalog-navigation-list {
 }
 
 .main-index-banner {
+    width: 1105px;
     margin-top: 350px;
     min-height: 215px;
     position: relative;
@@ -374,6 +424,7 @@ li:hover .catalog-navigation-list {
     color: #ffffff;
     text-decoration: none;
     background-color: #e9563a;
+    box-shadow: 0px 3px 2px 0px rgba(151, 90, 75, 1);
     border-radius: 50px;
     display: block;
     width: 216px;
@@ -385,6 +436,15 @@ li:hover .catalog-navigation-list {
     margin: 0 auto;
 
     margin-bottom: 41px;
+}
+
+.banner-button:hover {
+    background-color: #f07962;
+    box-shadow: 0px 3px 2px 0px rgba(172, 16, 0, 1);
+}
+
+.banner-button:active {
+    box-shadow: 0px 3px 2px 0px rgba(167, 48, 31, 1) inset;
 }
 
 .banner-slide-buttons {
@@ -402,6 +462,7 @@ li:hover .catalog-navigation-list {
     background-color: transparent;
     border-radius: 50%;
     margin-right: 8px;
+    cursor: pointer;
 }
 
 #button-1:checked ~ .site-wrapper label[for="button-1"],
@@ -418,23 +479,20 @@ li:hover .catalog-navigation-list {
 
 #button-1:checked ~ .site-wrapper {
     background-color: #849d8f;
-    background-image: url(../img/background-index-1.jpg);
-    background-repeat: no-repeat;
-    background-position: top center;
+    background-image: url(../img/background-index-1.png);
+
 }
 
 #button-2:checked ~ .site-wrapper {
     background-color: #8996a6;
-    background-image: url(../img/background-index-2.jpg);
-    background-repeat: no-repeat;
-    background-position: top center;
+    background-image: url(../img/background-index-2.png);
+
 }
 
 #button-3:checked ~ .site-wrapper {
     background-color: #9d8b84;
-    background-image: url(../img/background-index-3.jpg);
-    background-repeat: no-repeat;
-    background-position: top center;
+    background-image: url(../img/background-index-3.png);
+
 }
 
 .promo {
@@ -510,6 +568,14 @@ li:hover .catalog-navigation-list {
     float: right;
 }
 
+.button-promo:hover {
+    box-shadow: 0px 2px 1px 0px #8a0c01;
+}
+
+.button-promo:active{
+    box-shadow: 0px 3px 2px 0px #a52f1f inset;
+}
+
 .hit-products-list {
     list-style: none;
     padding: 0;
@@ -550,6 +616,7 @@ li:hover .catalog-navigation-list {
     line-height: 24px;
     font-weight: 700;
     background-color: #e9563a;
+    box-shadow: 0px 3px 2px 0px rgba(151, 90, 75, 1);
     border-radius: 50px;
     padding-left: 17px;
     padding-right: 17px;
@@ -559,6 +626,14 @@ li:hover .catalog-navigation-list {
     width: 166px;
     text-align: center;
     vertical-align: middle;
+}
+
+.item-hover-button:hover {
+    box-shadow: 0px 3px 2px 0px rgba(172, 16, 0, 1);
+}
+
+.item-hover-button:active {
+    box-shadow: 0px 3px 2px 0px rgba(167, 48, 31, 1) inset;
 }
 
 .hit-product-item:hover .item-hover-button {
@@ -583,6 +658,11 @@ li:hover .catalog-navigation-list {
     color: #ffffff;
     text-decoration: none;
     border-bottom: 1px solid #9db1a5;
+}
+
+.item-info-link:hover {
+    color: #ffbc9e;
+    border-bottom: 1px solid #ffbc9e;
 }
 
 .company-info {
@@ -730,7 +810,7 @@ li:hover .catalog-navigation-list {
     padding-left: 27px;
 }
 
-.email-mailing form input {
+.email-mailing input {
     font: inherit;
     font-size: 16px;
     line-height: 24px;
@@ -744,6 +824,10 @@ li:hover .catalog-navigation-list {
     margin-right: 11px;
 }
 
+.email-mailing input:hover {
+    border: 2px solid #c7c6c5;
+}
+
 .button-mailing-submit {
     border: none;
     font-size: 18px;
@@ -751,11 +835,21 @@ li:hover .catalog-navigation-list {
     font-weight: 700;
     color: #ffffff;
     background-color: #e9563a;
+    box-shadow: 0px 3px 2px 0px rgba(151, 90, 75, 1);
+    cursor: pointer;
     border-radius: 50px;
     padding-left: 19px;
     padding-right: 19px;
     padding-top: 12px;
     padding-bottom: 12px;
+}
+
+.button-mailing-submit:hover {
+    box-shadow: 0px 3px 2px 0px rgba(172, 16, 0, 1);
+}
+
+.button-mailing-submit:active {
+    box-shadow: 0px 3px 2px 0px rgba(167, 48, 31, 1) inset;
 }
 
 .map-feedback {
@@ -825,6 +919,7 @@ li:hover .catalog-navigation-list {
     line-height: 24px;
     font-weight: 700;
     background-color: #e9563a;
+    box-shadow: 0px 3px 2px 0px rgba(151, 90, 75, 1);
     border-radius: 50px;
     padding-left: 28px;
     padding-right: 28px;
@@ -862,6 +957,11 @@ li:hover .catalog-navigation-list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.footer-links a:hover {
+    color: #ffbc9e;
+    border-bottom: 1px solid #ffbc9e;
 }
 
 .footer-links-left {
@@ -913,6 +1013,11 @@ li:hover .catalog-navigation-list {
 
 .developer-link-span {
     border-bottom: 1px solid #9db1a5;
+}
+
+.developer-link-span:hover {
+    color: #ffbc9e;
+    border-bottom: 1px solid #ffbc9e;
 }
 
 .user-cart-block {
@@ -1023,6 +1128,11 @@ li:hover .catalog-navigation-list {
     border-radius: 50px;
     text-align: center;
     vertical-align: middle;
+}
+
+.user-cart-catalog .button-cart {
+    background-color: #f7f6f3;
+    color: #323232;
 }
 
 .user-cart-catalog .button-cart::before {
@@ -1406,6 +1516,16 @@ li:hover .catalog-navigation-list {
 
 .description a {
     text-decoration: none;
+}
+
+.description a:hover {
+    color: #ffbc9e;
+    border-bottom: 1px solid #ffbc9e;
+}
+
+.description a:active {
+    color: #ffbc9e;
+    border-bottom: 1px solid #ffbc9e;
 }
 
 .fast-view{
