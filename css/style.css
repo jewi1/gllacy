@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 body {
     font-family: Roboto, Arial, sans-serif;
     font-size: 16px;
@@ -31,7 +33,8 @@ body > input[type="radio"] {
 }
 
 .container {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     width: 1200px;
     min-width: 940px;
     margin: 0 auto;
@@ -39,6 +42,8 @@ body > input[type="radio"] {
 }
 
 .main-header .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     min-height: 73px;
 }
@@ -54,8 +59,12 @@ body > input[type="radio"] {
     list-style: none;
 
     width: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .site-navigation li {
@@ -82,7 +91,8 @@ body > input[type="radio"] {
 }
 
 .site-navigation .site-navigation-item:active {
-    box-shadow: 0 3px 3px #8a8a8a inset;
+    -webkit-box-shadow: 0 3px 3px #8a8a8a inset;
+            box-shadow: 0 3px 3px #8a8a8a inset;
 }
 
 .catalog-navigation-list {
@@ -97,6 +107,7 @@ body > input[type="radio"] {
     margin: 0;
 
     display: none;
+    z-index: 3;
 }
 
 li:hover .catalog-navigation-list {
@@ -149,6 +160,10 @@ li:hover .catalog-navigation-list {
 .user-buttons {
     margin-left: auto;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
     width: 263px;
 }
@@ -197,6 +212,8 @@ li:hover .catalog-navigation-list {
     display: none;
     padding: 20px 15px;
     border-radius: 5px;
+
+    z-index: 3;
 }
 
 .user-search:hover  .user-search-form {
@@ -204,7 +221,8 @@ li:hover .catalog-navigation-list {
 }
 
 .user-search-form input {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     width: 300px;
     padding-left: 10px;
     padding-top: 5px;
@@ -277,6 +295,7 @@ li:hover .catalog-navigation-list {
     background-color: #f8f7f4;
     display: none;
     border-radius: 5px;
+    z-index: 3;
 }
 
 .user-login:hover .user-login-form {
@@ -284,8 +303,11 @@ li:hover .catalog-navigation-list {
 }
 
 .user-login-form form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 241px;
     padding: 20px;
 }
@@ -301,7 +323,9 @@ li:hover .catalog-navigation-list {
     padding-top: 12px;
     padding-bottom: 12px;
     width: 226px;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
 }
 
 .user-login-form form input[type="password"] {
@@ -424,7 +448,8 @@ li:hover .catalog-navigation-list {
     color: #ffffff;
     text-decoration: none;
     background-color: #e9563a;
-    box-shadow: 0px 3px 2px 0px rgba(151, 90, 75, 1);
+    -webkit-box-shadow: 0px 3px 2px 0px rgba(151, 90, 75, 1);
+            box-shadow: 0px 3px 2px 0px rgba(151, 90, 75, 1);
     border-radius: 50px;
     display: block;
     width: 216px;
@@ -440,11 +465,13 @@ li:hover .catalog-navigation-list {
 
 .banner-button:hover {
     background-color: #f07962;
-    box-shadow: 0px 3px 2px 0px rgba(172, 16, 0, 1);
+    -webkit-box-shadow: 0px 3px 2px 0px rgba(172, 16, 0, 1);
+            box-shadow: 0px 3px 2px 0px rgba(172, 16, 0, 1);
 }
 
 .banner-button:active {
-    box-shadow: 0px 3px 2px 0px rgba(167, 48, 31, 1) inset;
+    -webkit-box-shadow: 0px 3px 2px 0px rgba(167, 48, 31, 1) inset;
+            box-shadow: 0px 3px 2px 0px rgba(167, 48, 31, 1) inset;
 }
 
 .banner-slide-buttons {
@@ -496,6 +523,8 @@ li:hover .catalog-navigation-list {
 }
 
 .promo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-bottom: 40px;
 }
@@ -569,17 +598,21 @@ li:hover .catalog-navigation-list {
 }
 
 .button-promo:hover {
-    box-shadow: 0px 2px 1px 0px #8a0c01;
+    -webkit-box-shadow: 0px 2px 1px 0px #8a0c01;
+            box-shadow: 0px 2px 1px 0px #8a0c01;
 }
 
 .button-promo:active{
-    box-shadow: 0px 3px 2px 0px #a52f1f inset;
+    -webkit-box-shadow: 0px 3px 2px 0px #a52f1f inset;
+            box-shadow: 0px 3px 2px 0px #a52f1f inset;
 }
 
 .hit-products-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -616,7 +649,8 @@ li:hover .catalog-navigation-list {
     line-height: 24px;
     font-weight: 700;
     background-color: #e9563a;
-    box-shadow: 0px 3px 2px 0px rgba(151, 90, 75, 1);
+    -webkit-box-shadow: 0px 3px 2px 0px rgba(151, 90, 75, 1);
+            box-shadow: 0px 3px 2px 0px rgba(151, 90, 75, 1);
     border-radius: 50px;
     padding-left: 17px;
     padding-right: 17px;
@@ -629,11 +663,13 @@ li:hover .catalog-navigation-list {
 }
 
 .item-hover-button:hover {
-    box-shadow: 0px 3px 2px 0px rgba(172, 16, 0, 1);
+    -webkit-box-shadow: 0px 3px 2px 0px rgba(172, 16, 0, 1);
+            box-shadow: 0px 3px 2px 0px rgba(172, 16, 0, 1);
 }
 
 .item-hover-button:active {
-    box-shadow: 0px 3px 2px 0px rgba(167, 48, 31, 1) inset;
+    -webkit-box-shadow: 0px 3px 2px 0px rgba(167, 48, 31, 1) inset;
+            box-shadow: 0px 3px 2px 0px rgba(167, 48, 31, 1) inset;
 }
 
 .hit-product-item:hover .item-hover-button {
@@ -693,9 +729,13 @@ li:hover .catalog-navigation-list {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 
 .advantages-list li {
@@ -747,6 +787,8 @@ li:hover .catalog-navigation-list {
 }
 
 .news-email {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-bottom: 40px;
 }
@@ -757,8 +799,13 @@ li:hover .catalog-navigation-list {
     width: 560px;
     min-height: 220px;
     margin-right: 26px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     border-radius: 15px;
 }
 
@@ -835,7 +882,8 @@ li:hover .catalog-navigation-list {
     font-weight: 700;
     color: #ffffff;
     background-color: #e9563a;
-    box-shadow: 0px 3px 2px 0px rgba(151, 90, 75, 1);
+    -webkit-box-shadow: 0px 3px 2px 0px rgba(151, 90, 75, 1);
+            box-shadow: 0px 3px 2px 0px rgba(151, 90, 75, 1);
     cursor: pointer;
     border-radius: 50px;
     padding-left: 19px;
@@ -845,16 +893,20 @@ li:hover .catalog-navigation-list {
 }
 
 .button-mailing-submit:hover {
-    box-shadow: 0px 3px 2px 0px rgba(172, 16, 0, 1);
+    -webkit-box-shadow: 0px 3px 2px 0px rgba(172, 16, 0, 1);
+            box-shadow: 0px 3px 2px 0px rgba(172, 16, 0, 1);
 }
 
 .button-mailing-submit:active {
-    box-shadow: 0px 3px 2px 0px rgba(167, 48, 31, 1) inset;
+    -webkit-box-shadow: 0px 3px 2px 0px rgba(167, 48, 31, 1) inset;
+            box-shadow: 0px 3px 2px 0px rgba(167, 48, 31, 1) inset;
 }
 
 .map-feedback {
     background-image: url(../img/map-background.jpg);
     background-repeat: no-repeat;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 430px;
 }
@@ -919,7 +971,8 @@ li:hover .catalog-navigation-list {
     line-height: 24px;
     font-weight: 700;
     background-color: #e9563a;
-    box-shadow: 0px 3px 2px 0px rgba(151, 90, 75, 1);
+    -webkit-box-shadow: 0px 3px 2px 0px rgba(151, 90, 75, 1);
+            box-shadow: 0px 3px 2px 0px rgba(151, 90, 75, 1);
     border-radius: 50px;
     padding-left: 28px;
     padding-right: 28px;
@@ -929,12 +982,17 @@ li:hover .catalog-navigation-list {
 
 .main-footer .container {
     margin-top: 36px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
     padding-bottom: 30px;
 }
 
 .footer-soial-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     list-style: none;
     padding: 0;
@@ -954,9 +1012,14 @@ li:hover .catalog-navigation-list {
     width: 358px;
     height: 55px;
     margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .footer-links a:hover {
@@ -1029,14 +1092,23 @@ li:hover .catalog-navigation-list {
     background-color: #f8f7f4;
     color: #323232;
     border-radius: 5px;
+
+    z-index: 3;
 }
 
 .user-cart:hover .user-cart-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .cart-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -1074,7 +1146,9 @@ li:hover .catalog-navigation-list {
 }
 
 .cart-button-cross {
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     margin-right: 14px;
     margin-left: 18px;
     border: none;
@@ -1099,14 +1173,17 @@ li:hover .catalog-navigation-list {
 .cart-item-img {
     position: relative;
     margin-right: 14px;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 
 .cart-price-total {
     font-size: 15px;
     line-height: 18px;
     font-weight: 700;
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     margin-right: 15px;
     margin-bottom: 11px;
 }
@@ -1115,7 +1192,8 @@ li:hover .catalog-navigation-list {
     width: 170px;
     padding-top: 9px;
     padding-bottom: 9px;
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     margin-right: 15px;
     margin-bottom: 20px;
 
@@ -1148,6 +1226,8 @@ li:hover .catalog-navigation-list {
 }
 
 .top-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -1155,9 +1235,12 @@ li:hover .catalog-navigation-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-right: auto;
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
 }
 
 .breadcrumbs li a {
@@ -1173,7 +1256,8 @@ li:hover .catalog-navigation-list {
     font-size: 14px;
     line-height: 16px;
     text-decoration: none;
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     margin-bottom: 1px;
 }
 
@@ -1187,7 +1271,8 @@ li:hover .catalog-navigation-list {
 }
 
 .top-main .working-information {
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
 }
 
 .catalog-page-title {
@@ -1207,6 +1292,8 @@ li:hover .catalog-navigation-list {
 }
 
 .filters-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -1362,6 +1449,8 @@ li:hover .catalog-navigation-list {
 }
 
 .filters-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -1410,7 +1499,9 @@ li:hover .catalog-navigation-list {
     color: #ffffff;
     text-align: center;
     font-size: 16px;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 
 .catalog{
@@ -1435,8 +1526,11 @@ li:hover .catalog-navigation-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .ice-cream-card{
@@ -1651,8 +1745,12 @@ li:hover .catalog-navigation-list {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 
 .pagination-list li {
@@ -1679,5 +1777,7 @@ li:hover .catalog-navigation-list {
 }
 
 .page-prev svg {
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
 }
