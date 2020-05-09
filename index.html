@@ -278,5 +278,22 @@
             </div>
         </footer>
     </div>
+    <section class="modal-feedback">
+        <h2 class="modal-title">Мы обязательно вам ответим!</h2>
+        <form action="https://echo.htmlacademy.ru" method="post" class="modal-form">
+            <input type="text" name="name" id="name-id" placeholder="Как вас зовут?" class="name-input">
+            <label for="name-id" class="visually-hidden">Имя</label>
+            <input type="email" name="email" id="email-id" placeholder="Ваша почта для ответа?" class="email-input">
+            <label for="email-id" class="visually-hidden">E-mail</label>
+            <textarea name="mail" id="mail-id" cols="30" rows="10" placeholder="Напишите что-нибудь..." class="mail-textarea"></textarea>
+            <label for="mail-id" class="visually-hidden">Напишите отзыв</label>
+            <button type="submit" class="button-submit">Отправить</button>
+            <button type="button" class="button-close">
+                <span class="visually-hidden">Закрыть форму</span>
+            </button>
+        </form>
+    </section>
+    <div class="modal-wrap"></div>
+    <script src="js/modal-write.js"></script>
 </body>
 </html>
