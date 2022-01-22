@@ -1,0 +1,12 @@
+.additional {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 40px;
+}
+
+.additional__news,
+.additional__email {
+  width: 560px;
+  height: 220px;
+}
